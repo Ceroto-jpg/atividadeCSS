@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Layout Flexbox</title>
+        <style>
+            #continer-flex {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                min-height: 200px;
+            }
+
+            #continer-flex .item {
+                flex-shrink: 1;
+                min-width: 0;
+                padding: 16px;
+                background-color: #e0e0e0;
+                overflow-wrap: anywhere;
+            }
+
+            @media (max-width: 599px) {
+                #continer-flex {
+                    flex-direction: column;
+                    align-items: stretch;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Layout Flexbox</h1>
+            <section id="continer-flex" aria-label="Itens organizados com Flexbox">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+            </section>
+        </main>
+    </body>
+</html>
